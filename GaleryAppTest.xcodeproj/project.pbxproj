@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F01406D2A7E7D1800840B12 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01406C2A7E7D1800840B12 /* Model.swift */; };
+		3F01406F2A7E7D3900840B12 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01406E2A7E7D3900840B12 /* InternetConnection.swift */; };
 		3F50FE5E2A6C2AC10076EFFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FE5D2A6C2AC10076EFFE /* AppDelegate.swift */; };
 		3F50FE602A6C2AC10076EFFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FE5F2A6C2AC10076EFFE /* SceneDelegate.swift */; };
 		3F50FE652A6C2AC10076EFFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F50FE632A6C2AC10076EFFE /* Main.storyboard */; };
@@ -16,8 +18,6 @@
 		3F50FE742A6C2DE50076EFFE /* FirstViewControllerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FE732A6C2DE50076EFFE /* FirstViewControllerImp.swift */; };
 		3F50FE772A6C31E70076EFFE /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FE752A6C31E70076EFFE /* ImageCollectionViewCell.swift */; };
 		3F50FE782A6C31E70076EFFE /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F50FE762A6C31E70076EFFE /* ImageCollectionViewCell.xib */; };
-		3F50FE7C2A6C3FE50076EFFE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FE7B2A6C3FE50076EFFE /* DetailViewController.swift */; };
-		3F50FE842A6EEB1F0076EFFE /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F50FE832A6EEB1F0076EFFE /* Detail.storyboard */; };
 		3F50FE892A6EEC140076EFFE /* FirstViewPresenterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FE882A6EEC140076EFFE /* FirstViewPresenterImp.swift */; };
 		3F50FE8B2A6EEC6F0076EFFE /* FirstViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FE8A2A6EEC6F0076EFFE /* FirstViewConfigurator.swift */; };
 		3F50FE8D2A6EEC830076EFFE /* FirstViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FE8C2A6EEC830076EFFE /* FirstViewRouter.swift */; };
@@ -30,9 +30,13 @@
 		3F50FE9F2A6EF5AC0076EFFE /* SecondViewPresenterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FE9E2A6EF5AC0076EFFE /* SecondViewPresenterImp.swift */; };
 		3F50FEA12A6EF5C30076EFFE /* SecondViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FEA02A6EF5C30076EFFE /* SecondViewConfigurator.swift */; };
 		3F50FEA32A6EF5D90076EFFE /* SecondViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FEA22A6EF5D90076EFFE /* SecondViewRouter.swift */; };
+		3F50FEB32A7911040076EFFE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FEB22A7911040076EFFE /* DetailViewController.swift */; };
+		63CE852660D561857BEA4CF0 /* Pods_GaleryAppTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CD63D4A48EF5E5C7C8F845 /* Pods_GaleryAppTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F01406C2A7E7D1800840B12 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		3F01406E2A7E7D3900840B12 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		3F50FE5A2A6C2AC10076EFFE /* GaleryAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GaleryAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F50FE5D2A6C2AC10076EFFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F50FE5F2A6C2AC10076EFFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +48,6 @@
 		3F50FE732A6C2DE50076EFFE /* FirstViewControllerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewControllerImp.swift; sourceTree = "<group>"; };
 		3F50FE752A6C31E70076EFFE /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F50FE762A6C31E70076EFFE /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
-		3F50FE7B2A6C3FE50076EFFE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		3F50FE832A6EEB1F0076EFFE /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		3F50FE882A6EEC140076EFFE /* FirstViewPresenterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewPresenterImp.swift; sourceTree = "<group>"; };
 		3F50FE8A2A6EEC6F0076EFFE /* FirstViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewConfigurator.swift; sourceTree = "<group>"; };
 		3F50FE8C2A6EEC830076EFFE /* FirstViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewRouter.swift; sourceTree = "<group>"; };
@@ -58,6 +60,10 @@
 		3F50FE9E2A6EF5AC0076EFFE /* SecondViewPresenterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewPresenterImp.swift; sourceTree = "<group>"; };
 		3F50FEA02A6EF5C30076EFFE /* SecondViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewConfigurator.swift; sourceTree = "<group>"; };
 		3F50FEA22A6EF5D90076EFFE /* SecondViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewRouter.swift; sourceTree = "<group>"; };
+		3F50FEB22A7911040076EFFE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3F99676EF51622FD70C84FA4 /* Pods-GaleryAppTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GaleryAppTest.release.xcconfig"; path = "Target Support Files/Pods-GaleryAppTest/Pods-GaleryAppTest.release.xcconfig"; sourceTree = "<group>"; };
+		42A430BFC09345F169DA77CB /* Pods-GaleryAppTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GaleryAppTest.debug.xcconfig"; path = "Target Support Files/Pods-GaleryAppTest/Pods-GaleryAppTest.debug.xcconfig"; sourceTree = "<group>"; };
+		89CD63D4A48EF5E5C7C8F845 /* Pods_GaleryAppTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GaleryAppTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +71,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CE852660D561857BEA4CF0 /* Pods_GaleryAppTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		298F3CA641C1E34302B51672 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42A430BFC09345F169DA77CB /* Pods-GaleryAppTest.debug.xcconfig */,
+				3F99676EF51622FD70C84FA4 /* Pods-GaleryAppTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3F50FE512A6C2AC10076EFFE = {
 			isa = PBXGroup;
 			children = (
 				3F50FE5C2A6C2AC10076EFFE /* GaleryAppTest */,
 				3F50FE5B2A6C2AC10076EFFE /* Products */,
+				298F3CA641C1E34302B51672 /* Pods */,
+				664C4C59DF4075BBA32AEC3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,7 +167,7 @@
 		3F50FE812A6EEADB0076EFFE /* DetailVC */ = {
 			isa = PBXGroup;
 			children = (
-				3F50FE7B2A6C3FE50076EFFE /* DetailViewController.swift */,
+				3F50FEB22A7911040076EFFE /* DetailViewController.swift */,
 			);
 			path = DetailVC;
 			sourceTree = "<group>";
@@ -158,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				3F50FE632A6C2AC10076EFFE /* Main.storyboard */,
-				3F50FE832A6EEB1F0076EFFE /* Detail.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -166,6 +183,8 @@
 		3F50FE852A6EEBAC0076EFFE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F01406C2A7E7D1800840B12 /* Model.swift */,
+				3F01406E2A7E7D3900840B12 /* InternetConnection.swift */,
 				3F50FE662A6C2AC30076EFFE /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -222,6 +241,14 @@
 			path = VCExtensions;
 			sourceTree = "<group>";
 		};
+		664C4C59DF4075BBA32AEC3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89CD63D4A48EF5E5C7C8F845 /* Pods_GaleryAppTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F50FE6E2A6C2AC30076EFFE /* Build configuration list for PBXNativeTarget "GaleryAppTest" */;
 			buildPhases = (
+				C00C3FEF32FA939B1D42744C /* [CP] Check Pods Manifest.lock */,
 				3F50FE562A6C2AC10076EFFE /* Sources */,
 				3F50FE572A6C2AC10076EFFE /* Frameworks */,
 				3F50FE582A6C2AC10076EFFE /* Resources */,
+				6E7AFB6533CA2CE66D61EAAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,12 +312,53 @@
 				3F50FE6A2A6C2AC30076EFFE /* LaunchScreen.storyboard in Resources */,
 				3F50FE672A6C2AC30076EFFE /* Assets.xcassets in Resources */,
 				3F50FE782A6C31E70076EFFE /* ImageCollectionViewCell.xib in Resources */,
-				3F50FE842A6EEB1F0076EFFE /* Detail.storyboard in Resources */,
 				3F50FE652A6C2AC10076EFFE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E7AFB6533CA2CE66D61EAAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GaleryAppTest/Pods-GaleryAppTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GaleryAppTest/Pods-GaleryAppTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GaleryAppTest/Pods-GaleryAppTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C00C3FEF32FA939B1D42744C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GaleryAppTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F50FE562A6C2AC10076EFFE /* Sources */ = {
@@ -299,18 +369,20 @@
 				3F50FE722A6C2D8C0076EFFE /* SecondViewControllerImp.swift in Sources */,
 				3F50FEA12A6EF5C30076EFFE /* SecondViewConfigurator.swift in Sources */,
 				3F50FE912A6EED120076EFFE /* FirstViewController.swift in Sources */,
+				3F01406F2A7E7D3900840B12 /* InternetConnection.swift in Sources */,
 				3F50FE772A6C31E70076EFFE /* ImageCollectionViewCell.swift in Sources */,
 				3F50FE5E2A6C2AC10076EFFE /* AppDelegate.swift in Sources */,
 				3F50FE932A6EED880076EFFE /* FirstViewPresenter.swift in Sources */,
 				3F50FE8D2A6EEC830076EFFE /* FirstViewRouter.swift in Sources */,
 				3F50FE992A6EF42B0076EFFE /* SecondViewController.swift in Sources */,
+				3F50FEB32A7911040076EFFE /* DetailViewController.swift in Sources */,
 				3F50FE892A6EEC140076EFFE /* FirstViewPresenterImp.swift in Sources */,
 				3F50FE8B2A6EEC6F0076EFFE /* FirstViewConfigurator.swift in Sources */,
 				3F50FE9B2A6EF4370076EFFE /* SecondViewPresenter.swift in Sources */,
 				3F50FEA32A6EF5D90076EFFE /* SecondViewRouter.swift in Sources */,
-				3F50FE7C2A6C3FE50076EFFE /* DetailViewController.swift in Sources */,
 				3F50FE9F2A6EF5AC0076EFFE /* SecondViewPresenterImp.swift in Sources */,
 				3F50FE952A6EEE550076EFFE /* VC+CollectionView.swift in Sources */,
+				3F01406D2A7E7D1800840B12 /* Model.swift in Sources */,
 				3F50FE602A6C2AC10076EFFE /* SceneDelegate.swift in Sources */,
 				3F50FE742A6C2DE50076EFFE /* FirstViewControllerImp.swift in Sources */,
 			);
@@ -454,11 +526,13 @@
 		};
 		3F50FE6F2A6C2AC30076EFFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42A430BFC09345F169DA77CB /* Pods-GaleryAppTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6T7K2U4VA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GaleryAppTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -481,11 +555,13 @@
 		};
 		3F50FE702A6C2AC30076EFFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F99676EF51622FD70C84FA4 /* Pods-GaleryAppTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6T7K2U4VA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GaleryAppTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

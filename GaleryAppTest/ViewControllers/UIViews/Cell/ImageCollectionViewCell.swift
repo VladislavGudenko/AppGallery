@@ -16,6 +16,13 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
 
     func setupCell(_ url: String) {
-        photoView.image = UIImage(named: url)
+        guard let url = URL(string: "https://gallery.prod1.webant.ru/media/\(url)") else {return}
+        
+        print(url)
+        photoView.kf.indicatorType = .activity
+        photoView.kf.setImage(with: url)
+        photoView.clipsToBounds = true
+        photoView.layer.cornerRadius = 10
     }
+    
 }

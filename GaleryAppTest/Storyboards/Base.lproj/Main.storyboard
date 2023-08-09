@@ -117,11 +117,11 @@
             </objects>
             <point key="canvasLocation" x="844" y="-100"/>
         </scene>
-        <!--Item 1-->
+        <!--NEW-->
         <scene sceneID="jur-7a-LIb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bqu-3P-d1L" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="rsf-Xe-iXb"/>
+                    <tabBarItem key="tabBarItem" title="NEW" selectedImage="star.circle.fill" catalog="system" id="rsf-Xe-iXb" propertyAccessControl="all"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UIC-FC-vuJ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -136,11 +136,11 @@
             </objects>
             <point key="canvasLocation" x="1748.854961832061" y="-403.52112676056339"/>
         </scene>
-        <!--Item 2-->
+        <!--POPULAR-->
         <scene sceneID="2gw-gB-WAT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jR2-bk-qMJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="mqM-NO-hzB"/>
+                    <tabBarItem key="tabBarItem" title="POPULAR" selectedImage="party.popper" catalog="system" id="mqM-NO-hzB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pRr-je-OT9">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -157,6 +157,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="party.popper" catalog="system" width="128" height="116"/>
+        <image name="star.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

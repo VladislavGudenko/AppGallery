@@ -9,4 +9,5 @@ import Foundation
 
 protocol FirstViewController: AnyObject {
     func reloadCollectionView()
+    
 }

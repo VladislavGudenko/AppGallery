@@ -6,11 +6,23 @@
 //
 
 import Foundation
-
+import Alamofire
+import Kingfisher
+//здесь у нас лежат в массиве все наши картинки и досутп к ним обеспечивается через presenter?.getImages()
 class FirstViewPresenterImp: FirstViewPresenter {
+    func request() {
+        
+    }
+    
+    
+    
     
     private weak var view: FirstViewController?
     private let router: FirstViewRouter
+    
+    
+
+
     
     private var images = [String]()
     
@@ -24,13 +36,13 @@ class FirstViewPresenterImp: FirstViewPresenter {
         images
     }
     
+    
+    
     func loadImages() {
-        for index in 0...9 {
-            let image = "image\(index)"
-            images.append(image)
-        }
         view?.reloadCollectionView()
     }
+    
+    
     
     
 }

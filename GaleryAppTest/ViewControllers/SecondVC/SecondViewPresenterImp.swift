@@ -25,11 +25,6 @@ class SecondViewPresenterImp: SecondViewPresenter {
     }
     
     func loadImages() {
-        for index in 0...9 {
-            let image = "dog\(index)"
-            images.append(image)
-        }
-        
         view?.reloadCollectionView()
     }
     

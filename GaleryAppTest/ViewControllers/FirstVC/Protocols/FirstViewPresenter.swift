@@ -11,4 +11,6 @@ protocol FirstViewPresenter {
     
     func getImages() -> [String]
     func loadImages()
+    func request()
+    
 }
