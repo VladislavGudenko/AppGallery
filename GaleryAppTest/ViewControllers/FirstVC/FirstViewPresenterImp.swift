@@ -32,16 +32,16 @@ class FirstViewPresenterImp: FirstViewPresenter {
         self.router = router
     }
     
-    func getImages() -> [String] {
-        images
-    }
-    
-    
-    
-    func loadImages() {
-        view?.reloadCollectionView()
-    }
-    
+//    func getImages() -> [String] {
+//        images
+//    }
+//
+//
+//
+//    func loadImages() {
+//        view?.reloadCollectionView()
+//    }
+//    
     
     
     

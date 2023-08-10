@@ -9,6 +9,6 @@ import Foundation
 
 protocol SecondViewPresenter {
     
-    func getImages() -> [String]
-    func loadImages()
+//    func getImages() -> [String]
+//    func loadImages()
 }

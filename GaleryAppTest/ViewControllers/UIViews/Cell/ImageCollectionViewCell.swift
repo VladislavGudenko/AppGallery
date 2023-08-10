@@ -14,15 +14,13 @@ class ImageCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+//метод загружающий по юрл картинку и устанавливающий в ячейку картинку
     func setupCell(_ url: String) {
         guard let url = URL(string: "https://gallery.prod1.webant.ru/media/\(url)") else {return}
-        
         print(url)
         photoView.kf.indicatorType = .activity
         photoView.kf.setImage(with: url)
         photoView.clipsToBounds = true
         photoView.layer.cornerRadius = 10
     }
-    
 }

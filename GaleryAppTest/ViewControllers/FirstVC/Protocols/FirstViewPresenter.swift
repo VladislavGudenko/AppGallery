@@ -9,8 +9,8 @@ import Foundation
 
 protocol FirstViewPresenter {
     
-    func getImages() -> [String]
-    func loadImages()
-    func request()
+//    func getImages() -> [String]
+//    func loadImages()
+ //   func request()
     
 }

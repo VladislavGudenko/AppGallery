@@ -2,14 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UDX-XT-FSO">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Second View Controller Imp-->
+        <!--Popular-->
         <scene sceneID="Gqc-mu-2uV">
             <objects>
                 <viewController id="nOs-oi-aC4" customClass="SecondViewControllerImp" customModule="GaleryAppTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,41 +17,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yyl-Db-ewv">
-                                <rect key="frame" x="16" y="59" width="361" height="710"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yyl-Db-ewv">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="0.0" id="HXf-FU-Au5">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jaU-y7-9jR">
-                                        <rect key="frame" x="2" y="2" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9tl-u9-6hc">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k49-NQ-tHW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yyl-Db-ewv" firstAttribute="top" secondItem="k49-NQ-tHW" secondAttribute="top" id="O7r-5X-Utz"/>
+                            <constraint firstItem="yyl-Db-ewv" firstAttribute="leading" secondItem="k49-NQ-tHW" secondAttribute="leading" id="iov-5Z-96U"/>
+                            <constraint firstItem="yyl-Db-ewv" firstAttribute="trailing" secondItem="k49-NQ-tHW" secondAttribute="trailing" id="lb6-Sd-kNN"/>
+                            <constraint firstItem="yyl-Db-ewv" firstAttribute="bottom" secondItem="k49-NQ-tHW" secondAttribute="bottom" id="xbM-ij-kPo"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RcE-aZ-zbi"/>
+                    <navigationItem key="navigationItem" title="Popular" id="RcE-aZ-zbi"/>
                     <connections>
                         <outlet property="secondCollection" destination="yyl-Db-ewv" id="bU0-of-ptr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbq-zo-16n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2575" y="350"/>
+            <point key="canvasLocation" x="2574.8091603053435" y="350"/>
         </scene>
-        <!--First View Controller Imp-->
+        <!--New-->
         <scene sceneID="NMY-7v-Gsw">
             <objects>
                 <viewController id="c2r-Md-hhc" customClass="FirstViewControllerImp" customModule="GaleryAppTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,26 +55,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WSz-MB-CYU">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WSz-MB-CYU">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="0.0" id="epd-DO-Gan">
                                     <size key="itemSize" width="304" height="260"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uGB-IB-Ta8">
-                                        <rect key="frame" x="44.666666666666664" y="2" width="304" height="260"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pJh-Qq-DcW">
-                                            <rect key="frame" x="0.0" y="0.0" width="304" height="260"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="304" height="260"/>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6gl-I3-Rpc"/>
@@ -90,7 +77,7 @@
                             <constraint firstItem="WSz-MB-CYU" firstAttribute="bottom" secondItem="6gl-I3-Rpc" secondAttribute="bottom" id="nte-dk-UeR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gGE-EZ-PqG"/>
+                    <navigationItem key="navigationItem" title="New" largeTitleDisplayMode="always" id="gGE-EZ-PqG"/>
                     <connections>
                         <outlet property="firstCollection" destination="WSz-MB-CYU" id="K29-pR-Ti1"/>
                     </connections>
@@ -106,7 +93,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ufx-ym-fug">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemPinkColor"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Bqu-3P-d1L" kind="relationship" relationship="viewControllers" id="tZU-NW-TGR"/>
@@ -117,15 +106,25 @@
             </objects>
             <point key="canvasLocation" x="844" y="-100"/>
         </scene>
-        <!--NEW-->
+        <!--New-->
         <scene sceneID="jur-7a-LIb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bqu-3P-d1L" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="NEW" selectedImage="star.circle.fill" catalog="system" id="rsf-Xe-iXb" propertyAccessControl="all"/>
+                    <tabBarItem key="tabBarItem" title="New" selectedImage="star.circle.fill" catalog="system" id="rsf-Xe-iXb" propertyAccessControl="all">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UIC-FC-vuJ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -136,15 +135,22 @@
             </objects>
             <point key="canvasLocation" x="1748.854961832061" y="-403.52112676056339"/>
         </scene>
-        <!--POPULAR-->
+        <!--Popular-->
         <scene sceneID="2gw-gB-WAT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jR2-bk-qMJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="POPULAR" selectedImage="party.popper" catalog="system" id="mqM-NO-hzB"/>
+                    <tabBarItem key="tabBarItem" title="Popular" selectedImage="party.popper" catalog="system" id="mqM-NO-hzB">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pRr-je-OT9">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -161,6 +167,9 @@
         <image name="star.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

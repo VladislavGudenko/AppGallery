@@ -19,14 +19,14 @@ class SecondViewPresenterImp: SecondViewPresenter {
         self.view = view
         self.router = router
     }
+// уже более не используется - методы удалены из SecondViewPresenter
+//    func getImages() -> [String] {
+//        images
+//    }
     
-    func getImages() -> [String] {
-        images
-    }
-    
-    func loadImages() {
-        view?.reloadCollectionView()
-    }
+//    func loadImages() {
+//        view?.reloadCollectionView()
+//    }
     
     
 }
