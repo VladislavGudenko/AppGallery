@@ -1,18 +1,18 @@
+////
+////  SecondViewRouter.swift
+////  GaleryAppTest
+////
+////  Created by Владислав Гуденко on 24.07.2023.
+////
 //
-//  SecondViewRouter.swift
-//  GaleryAppTest
+//import UIKit
 //
-//  Created by Владислав Гуденко on 24.07.2023.
+//class SecondViewRouter {
 //
-
-import UIKit
-
-class SecondViewRouter {
-    
-    weak var view: UIViewController?
-    
-    init(view: SecondViewControllerImp) {
-        self.view = view
-    }
-    
-}
+//    weak var view: UIViewController?
+//
+//    init(view: SecondViewControllerImp) {
+//        self.view = view
+//    }
+//
+//}

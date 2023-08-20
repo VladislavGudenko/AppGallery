@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.7.1)
+  - DBDebugToolkit (0.6.0)
   - Kingfisher (7.8.1)
 
 DEPENDENCIES:
   - Alamofire
+  - DBDebugToolkit (~> 0.6.0)
   - Kingfisher
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - DBDebugToolkit
     - Kingfisher
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  DBDebugToolkit: 03eb3483da4daf03b853b83ade5a8da9c8b7aff4
   Kingfisher: 63f677311d36a3473f6b978584f8a3845d023dc5
 
-PODFILE CHECKSUM: ca220e5bf5a45157557d6456507f91df04886cc3
+PODFILE CHECKSUM: 1048aa6b73d0c3a76bee97218f3c828cc2423995
 
 COCOAPODS: 1.12.1

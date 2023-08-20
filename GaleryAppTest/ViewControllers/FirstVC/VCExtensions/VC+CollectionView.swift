@@ -14,7 +14,7 @@ import Kingfisher
 extension FirstViewControllerImp: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     //здесь устанавливаем количество элементов в секции - прогоняется через массив.каунт
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayDataNew.count
+        return presenter?.getImages().count ?? 0
     }
     //здесь привязываем к ячейке картинку - картинка проходит через массив индекспас и данные берутся из структуры
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -22,24 +22,46 @@ extension FirstViewControllerImp: UICollectionViewDataSource, UICollectionViewDe
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? ImageCollectionViewCell else {
             return UICollectionViewCell()
         }
-        let data = arrayDataNew
-        cell.setupCell(data[indexPath.row].image?.name ?? "")
+        guard let data = presenter?.getImages() else { return UICollectionViewCell() }
+        cell.setupCell(data[indexPath.row].image?.name ?? "", currentIndexPath: indexPath)
         return cell
     }
-    //здесь мы устанавливаем параметры коллекшнвью (лэйауты) частично сделанные в сториборде и добавленные здесь
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let frameCV = collectionView.frame
-        let widthCell = frameCV.width / CGFloat(2)
-        let heightCell = widthCell
-        let spacing = CGFloat((3)) * 2 / CGFloat(2)
-        return CGSize(width: widthCell - spacing, height: heightCell - (4))
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        let lineSpacing = CGFloat(15)
+        return lineSpacing
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        let itemSpacing = CGFloat(15)
+        return itemSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width / 2 - 2 * 12
+        // на старте приложения
+//        UIApplication.shared.statusBarOrientation.isLandscape
+        if UIApplication.shared.statusBarOrientation.isLandscape {
+            let landscapeLeftWidth = collectionView.frame.width / 2 - 2 * 12
+            return CGSize(width: landscapeLeftWidth, height: landscapeLeftWidth)
+        }
+        return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if UIApplication.shared.statusBarOrientation.isLandscape {
+            return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        }
+        return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+    }
+    
+    
     //здесь метод который по нажатию на ячейку передает в детальный вью контроллер - картинку по ее имени, название, описание, имя пользователя и дату
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
-        let images = arrayDataNew
-            navigationController?.pushViewController(detailViewController, animated: true)
+        guard let images = presenter?.getImages() else {return}
+            navigationController?.pushViewController(detailViewController,
+                                                     animated: true)
         detailViewController.setupCell(stringImage: images[indexPath.row].image?.name ?? "")
         detailViewController.printName(stringImage: images[indexPath.row].name ?? "")
         detailViewController.printDescription(stringImage: images[indexPath.row].description ?? "")
@@ -48,15 +70,16 @@ extension FirstViewControllerImp: UICollectionViewDataSource, UICollectionViewDe
     }
     //данный метод отвечает за пагинацию - если текущая страница меньше или равно чем общее количество страниц выполняется запрос - в запросе стоит += 1 поэтому к каждой текущей странице прибавляется еще одна и так далее пока не достигнет конца страницы
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == self.arrayDataNew.count - 1 {
-            guard let totalPages = totalPages,
-                  currentPage <= totalPages
+        guard let count = presenter?.getImages().count else { return }
+        if indexPath.row == count - 1 {
+            act.isHidden = false
+            guard let totalPages = presenter?.totalPages,
+                  presenter?.currentPage ?? 0 <= totalPages
             else {
-                indicator.stopAnimating()
-                indicator.hidesWhenStopped = true
+                act.isHidden = presenter?.currentPage ?? 0 > presenter?.totalPages ?? 0
                 return
             }
-            request()
+            presenter?.request()
         }
     }
 }

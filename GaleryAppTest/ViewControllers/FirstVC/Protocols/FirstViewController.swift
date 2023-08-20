@@ -9,5 +9,7 @@ import Foundation
 
 protocol FirstViewController: AnyObject {
     func reloadCollectionView()
-    
+    func setInternetImage(isHidden: Bool)
+    func getSelectedIndex() -> Int
+
 }

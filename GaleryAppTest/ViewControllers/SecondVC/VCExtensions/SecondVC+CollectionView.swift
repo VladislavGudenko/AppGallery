@@ -22,17 +22,40 @@ extension SecondViewControllerImp: UICollectionViewDataSource, UICollectionViewD
             return UICollectionViewCell()
         }
         let data = arrayDataPopular
-        cell.setupCell(data[indexPath.row].image?.name ?? "")
+        cell.setupCell(data[indexPath.row].image?.name ?? "", currentIndexPath: indexPath)
         return cell
     }
     //здесь мы устанавливаем параметры коллекшнвью (лэйауты) частично сделанные в сториборде и добавленные здесь
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        let lineSpacing = CGFloat(15)
+        print("mejduLiniyami \(lineSpacing)")
+        return lineSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        let itemSpacing = CGFloat(15)
+        print("mejduYacheykami \(itemSpacing)")
+        return itemSpacing
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let frameCV = collectionView.frame
-        let widthCell = frameCV.width / CGFloat(2)
-        let heightCell = widthCell
-        let spacing = CGFloat((3)) * 2 / CGFloat(2)
-        return CGSize(width: widthCell - spacing, height: heightCell - (4))
+        let width = collectionView.frame.width / 2 - 2 * 12
+        print("\(indexPath.row) and \(width)")
+        // на старте приложения
+//        UIApplication.shared.statusBarOrientation.isLandscape
+        if UIApplication.shared.statusBarOrientation.isLandscape {
+            let landscapeLeftWidth = collectionView.frame.width / 2 - 2 * 12
+            print("razmer \(landscapeLeftWidth)")
+            return CGSize(width: landscapeLeftWidth, height: landscapeLeftWidth)
+        }
+        return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if UIApplication.shared.statusBarOrientation.isLandscape {
+            return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        }
+        return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
     }
     //здесь метод который по нажатию на ячейку передает в детальный вью контроллер - картинку по ее имени, название, описание, имя пользователя и дату
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -47,14 +70,17 @@ extension SecondViewControllerImp: UICollectionViewDataSource, UICollectionViewD
     }
     //данный метод отвечает за пагинацию - если текущая страница меньше или равно чем общее количество страниц выполняется запрос - в запросе стоит += 1 поэтому к каждой текущей странице прибавляется еще одна и так далее пока не достигнет конца страницы
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+                
         if indexPath.row == self.arrayDataPopular.count - 1 {
             guard let totalPages = totalPages,
                   currentPage <= totalPages
             else {
-                indicator.stopAnimating()
-                indicator.hidesWhenStopped = true
+//                indicator.stopAnimating()
+//                indicator.hidesWhenStopped = true
                 return
             }
+            countOfRequests += 1
+            print("countOfRequests \(countOfRequests)")
             request()
         }
     }
