@@ -11,7 +11,6 @@ protocol FirstViewPresenter {
     var currentPage: Int {get set}
     var totalPages: Int? {get set}
     func getImages() -> [Data]
-//    func loadImages()
     func request()
     func refresh()
 }

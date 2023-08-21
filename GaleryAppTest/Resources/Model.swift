@@ -20,12 +20,9 @@ struct Data: Codable {
     var new, popular: Bool?
     var id: Int?
     var image: Image?
-    
-    
 }
         
 struct Image: Codable {
     var id: Int
     var name: String
-    
 }

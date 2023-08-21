@@ -10,7 +10,7 @@ import Alamofire
 import Kingfisher
 
 
-//все экстеншены для коллекшн вью
+//MARK: - Extension Collection View
 extension FirstViewControllerImp: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     //здесь устанавливаем количество элементов в секции - прогоняется через массив.каунт
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -26,42 +26,38 @@ extension FirstViewControllerImp: UICollectionViewDataSource, UICollectionViewDe
         cell.setupCell(data[indexPath.row].image?.name ?? "", currentIndexPath: indexPath)
         return cell
     }
-    
+    //минимальное расстояние между ячейками
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         let lineSpacing = CGFloat(15)
         return lineSpacing
     }
-    
+    //минимальное расстояние между линиями
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         let itemSpacing = CGFloat(15)
         return itemSpacing
     }
-    
+    //задаем количество и размерность ячеек - экран делится на 2 части и минус2*12(24)
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width / 2 - 2 * 12
-        // на старте приложения
-//        UIApplication.shared.statusBarOrientation.isLandscape
         if UIApplication.shared.statusBarOrientation.isLandscape {
             let landscapeLeftWidth = collectionView.frame.width / 2 - 2 * 12
             return CGSize(width: landscapeLeftWidth, height: landscapeLeftWidth)
         }
         return CGSize(width: width, height: width)
     }
-    
+    //задаем отступы между ячейками
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if UIApplication.shared.statusBarOrientation.isLandscape {
             return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         }
         return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
     }
-    
-    
     //здесь метод который по нажатию на ячейку передает в детальный вью контроллер - картинку по ее имени, название, описание, имя пользователя и дату
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
         guard let images = presenter?.getImages() else {return}
-            navigationController?.pushViewController(detailViewController,
-                                                     animated: true)
+        navigationController?.pushViewController(detailViewController,
+                                                 animated: true)
         detailViewController.setupCell(stringImage: images[indexPath.row].image?.name ?? "")
         detailViewController.printName(stringImage: images[indexPath.row].name ?? "")
         detailViewController.printDescription(stringImage: images[indexPath.row].description ?? "")

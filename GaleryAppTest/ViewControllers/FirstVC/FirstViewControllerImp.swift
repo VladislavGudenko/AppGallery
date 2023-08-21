@@ -15,7 +15,7 @@ class FirstViewControllerImp: UIViewController {
     @IBOutlet weak var act: UIView!
     @IBOutlet weak var firstCollection: UICollectionView!
     
-    //MARK: - Properies
+    //MARK: - Properties
     var presenter: FirstViewPresenter?
     let cellId = "cell"
     var internetImage = UIImageView()
@@ -93,7 +93,6 @@ class FirstViewControllerImp: UIViewController {
         rotationAnimation.toValue = CGFloat.pi * 2
         rotationAnimation.duration = 2 // Продолжительность анимации в секундах
         rotationAnimation.repeatCount = .infinity // Значение .infinity означает бесконечное повторение
-        
         rotatingImageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
     }
     
@@ -125,6 +124,5 @@ extension FirstViewControllerImp: FirstViewController {
     
     func getSelectedIndex() -> Int {
         tabBarController?.selectedIndex ?? 0
-        
     }
 }

@@ -7,9 +7,10 @@
 
 import UIKit
 import Kingfisher
-//подписываем также на коллекшн вью (UICollectionViewDelegate)
+
 class DetailViewController: UIViewController, UICollectionViewDelegate {
     
+    //MARK: - Properties
     private lazy var scrollView: UIScrollView = {
        let scrollView = UIScrollView()
         scrollView.backgroundColor = .white
@@ -29,17 +30,12 @@ class DetailViewController: UIViewController, UICollectionViewDelegate {
     let userName = UILabel()
     let dateCreation = UILabel()
     
+    //MARK: - Methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
         tabBarController?.tabBar.isHidden = true
     }
-    
-//    func navBarHidden() {
-//        let navigationBar = UINavigationBar()
-//
-//        navigationBar.isHidden = false
-//    }
     
     //метод загрузки детального изображения
     func setupCell (stringImage: String) {
@@ -68,9 +64,7 @@ class DetailViewController: UIViewController, UICollectionViewDelegate {
     func printDate (stringImage: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        guard let date = dateFormatter.date(from: stringImage) else {
-            return ""
-        }
+        guard let date = dateFormatter.date(from: stringImage) else { return "" }
         let neededDate = DateFormatter()
         neededDate.dateFormat = "dd.MM.yyyy"
         let dateString = neededDate.string(from: date)
@@ -130,7 +124,7 @@ class DetailViewController: UIViewController, UICollectionViewDelegate {
         descriptionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         descriptionView.textColor = .black
     }
-
+// MARK: - Lifecycle
         override func viewDidLoad() {
             super.viewDidLoad()
             

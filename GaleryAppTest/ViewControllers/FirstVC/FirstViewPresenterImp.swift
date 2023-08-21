@@ -11,8 +11,7 @@ import Kingfisher
 
 class FirstViewPresenterImp: FirstViewPresenter {
     
-    
-    
+    //MARK: - Properties
     var arrayDataNew = [Data]()
     var currentPage = 1
     var totalPages: Int?
@@ -23,13 +22,11 @@ class FirstViewPresenterImp: FirstViewPresenter {
     var getUrlPopular: String {
         "https://gallery.prod1.webant.ru/api/photos?new=false&popular=true&page=\(currentPage)&limit=10"
     }
+    
     var selectedIndex = 0
-    
-    
     
     private weak var view: FirstViewController?
     private let router: FirstViewRouter
-
     private var images = [String]()
     
     init(_ view: FirstViewController,
@@ -37,6 +34,7 @@ class FirstViewPresenterImp: FirstViewPresenter {
         self.view = view
         self.router = router
     }
+    //MARK: - Methods
     func refresh() {
         currentPage = 1
         arrayDataNew = []
