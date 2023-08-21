@@ -106,6 +106,7 @@ class FirstViewControllerImp: UIViewController {
     
     @objc private func refresh(sender: UIRefreshControl) {
         presenter?.refresh()
+        firstCollection.reloadData()
         sender.endRefreshing()
     }
 }

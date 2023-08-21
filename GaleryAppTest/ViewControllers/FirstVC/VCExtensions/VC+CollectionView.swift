@@ -24,6 +24,7 @@ extension FirstViewControllerImp: UICollectionViewDataSource, UICollectionViewDe
         }
         guard let data = presenter?.getImages() else { return UICollectionViewCell() }
         cell.setupCell(data[indexPath.row].image?.name ?? "", currentIndexPath: indexPath)
+        print("data is \(data)")
         return cell
     }
     //минимальное расстояние между ячейками
